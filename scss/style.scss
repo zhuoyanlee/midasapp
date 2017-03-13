@@ -59,15 +59,18 @@ $url_background_cover_restaurant_02: url(../img/food_cover_02.png);
 $url_background_cover_restaurant_03: url(../img/food_cover_03.png);
 
 //end global variable section
-$primary: #bd081c;
+$primary: #eb6660;
 
 md-toolbar {
   background-color: $primary;
-  background: url(../img/LandingPage_genericbg_main.png);
+  /*background: url(../img/LandingPage_genericbg_main.png);*/
 }
 ion-header-bar.material-background-nav-bar.bar-header {
   background-color: $primary!important;
-  background: url(../img/LandingPage_genericbg_topnav.png) !important;
+/*  background: url(../img/LandingPage_genericbg_topnav.png) !important;*/
+}
+md-list-item-text h3 {
+  line-height:normal;
 }
 //global class section
 body {

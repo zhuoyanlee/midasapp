@@ -13,7 +13,7 @@ appControllers.controller('fundsListCtrl', function ($http, $scope,$stateParams,
 			headers: { 'Authorization': 'Basic ' + btoa('alex:b45k3t')},
 			cache : true, // FIXME need to put an expiry to the cache somehow
 		}).then(function(response) {
-			$scope.noteList = response.data;
+			$scope.fundList = response.data;
 		});
             
             

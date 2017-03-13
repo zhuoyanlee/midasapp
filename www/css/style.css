@@ -6,6 +6,9 @@ ion-header-bar.material-background-nav-bar.bar-header {
   background-color: #bd081c !important;
   background: url(../img/LandingPage_genericbg_topnav.png) !important; }
 
+md-list-item-text h3 {
+  line-height: normal; }
+
 body {
   font-family: RobotoDraft, Roboto, Helvetica Neue, sans-serif; }
 
