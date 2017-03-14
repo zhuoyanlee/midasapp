@@ -691,7 +691,8 @@ md-sidenav {
 //menu header section
 #toggle-menu-left-header {
   height: 154px;
-  background: $url_background_cover_pixels repeat 0;
+  /*background: $url_background_cover_pixels repeat 0;*/
+  background-color:$primary!important;
   /*background-position-x: 8px;*/
   background-position-x: 0px;
   color: $color_white;

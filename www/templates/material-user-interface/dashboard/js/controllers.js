@@ -5,6 +5,10 @@ appControllers.controller('dashboardCtrl', function ($scope, $timeout, $state,$s
     //For enable/disable row animation.
     $scope.isAnimated =  $stateParams.isAnimated;
 
+	// Chart data
+    $scope.labels = ["Download Sales", "In-Store Sales", "Mail-Order Sales"];
+  	$scope.data = [300, 500, 100];
+  		
     // navigateTo is for navigate to other page 
     // by using targetPage to be the destination state. 
     // Parameter :  

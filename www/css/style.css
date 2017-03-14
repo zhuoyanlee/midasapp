@@ -1,10 +1,10 @@
 md-toolbar {
-  background-color: #bd081c;
-  background: url(../img/LandingPage_genericbg_main.png); }
+  background-color: #eb6660;
+  /*background: url(../img/LandingPage_genericbg_main.png);*/ }
 
 ion-header-bar.material-background-nav-bar.bar-header {
-  background-color: #bd081c !important;
-  background: url(../img/LandingPage_genericbg_topnav.png) !important; }
+  background-color: #eb6660 !important;
+  /*  background: url(../img/LandingPage_genericbg_topnav.png) !important;*/ }
 
 md-list-item-text h3 {
   line-height: normal; }
@@ -439,7 +439,8 @@ md-sidenav {
 
 #toggle-menu-left-header {
   height: 154px;
-  background: url(../img/LandingPage_genericbg_RR.png) repeat 0;
+  /*background: $url_background_cover_pixels repeat 0;*/
+  background-color: #eb6660 !important;
   /*background-position-x: 8px;*/
   background-position-x: 0px;
   color: white;
