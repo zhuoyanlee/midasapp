@@ -1048,172 +1048,172 @@ md-sidenav {
       color: white;
       width: 64%; }
 
-#dashboard-content {
+#dashboard-content, #addTrans-content {
   margin-top: 164px; }
-  #dashboard-content .menu-more {
+  #dashboard-content .menu-more, #addTrans-content .menu-more {
     text-align: right; }
-  #dashboard-content .menu-list {
+  #dashboard-content .menu-list, #addTrans-content .menu-list {
     padding-top: 5px;
     padding-bottom: 10px !important; }
-    #dashboard-content .menu-list .menu-item {
+    #dashboard-content .menu-list .menu-item, #addTrans-content .menu-list .menu-item {
       padding: 14px; }
-      #dashboard-content .menu-list .menu-item .col-25 {
+      #dashboard-content .menu-list .menu-item .col-25, #addTrans-content .menu-list .menu-item .col-25 {
         text-align: center;
         font-size: 22px;
         color: gray; }
-      #dashboard-content .menu-list .menu-item .col-50 {
+      #dashboard-content .menu-list .menu-item .col-50, #addTrans-content .menu-list .menu-item .col-50 {
         font-size: 15px;
         white-space: nowrap;
         overflow-x: hidden;
         text-overflow: ellipsis; }
 
-#user-interface-content {
+#user-interface-content, #addTrans-content {
   height: 100%; }
-  #user-interface-content .slider {
+  #user-interface-content .slider, #addTrans-content .slider {
     height: 100%; }
-  #user-interface-content .slider-slide {
+  #user-interface-content .slider-slide, #addTrans-content .slider-slide {
     padding-top: 70px; }
-  #user-interface-content .slider-pager {
+  #user-interface-content .slider-pager, #addTrans-content .slider-pager {
     margin-bottom: 78px !important; }
-  #user-interface-content .slider-slide {
+  #user-interface-content .slider-slide, #addTrans-content .slider-slide {
     padding-top: 0; }
-  #user-interface-content .icon.ion-record {
+  #user-interface-content .icon.ion-record, #addTrans-content .icon.ion-record {
     color: gray;
     font-size: 8px; }
-  #user-interface-content span {
+  #user-interface-content span, #addTrans-content span {
     margin: 0; }
-  #user-interface-content .slide-01 {
+  #user-interface-content .slide-01, #addTrans-content .slide-01 {
     top: 20%;
     text-align: center; }
-    #user-interface-content .slide-01 .button-icon-content {
+    #user-interface-content .slide-01 .button-icon-content, #addTrans-content .slide-01 .button-icon-content {
       margin: 8px; }
-      #user-interface-content .slide-01 .button-icon-content .button-icon {
+      #user-interface-content .slide-01 .button-icon-content .button-icon, #addTrans-content .slide-01 .button-icon-content .button-icon {
         margin: 12px;
         font-size: 46px;
         color: gray; }
-    #user-interface-content .slide-01 .md-raised.md-button.md-default-theme {
+    #user-interface-content .slide-01 .md-raised.md-button.md-default-theme, #addTrans-content .slide-01 .md-raised.md-button.md-default-theme {
       width: 160px; }
-      #user-interface-content .slide-01 .md-raised.md-button.md-default-theme.material-background {
+      #user-interface-content .slide-01 .md-raised.md-button.md-default-theme.material-background, #addTrans-content .slide-01 .md-raised.md-button.md-default-theme.material-background {
         color: white; }
-    #user-interface-content .slide-01 .md-button.md-accent.md-fab i {
+    #user-interface-content .slide-01 .md-button.md-accent.md-fab i, #addTrans-content .slide-01 .md-button.md-accent.md-fab i {
       font-size: x-large;
       color: white; }
-  #user-interface-content .slide-02 {
+  #user-interface-content .slide-02, #addTrans-content .slide-02 {
     top: 14%; }
-    #user-interface-content .slide-02 #default-input-content {
+    #user-interface-content .slide-02 #default-input-content, #addTrans-content .slide-02 #default-input-content {
       margin: 20px 20px 0 34px; }
-      #user-interface-content .slide-02 #default-input-content md-input-container.md-list-item-full-width {
+      #user-interface-content .slide-02 #default-input-content md-select, #user-interface-content .slide-02 #default-input-content md-input-container.md-list-item-full-width, #addTrans-content .slide-02 #default-input-content md-select, #addTrans-content .slide-02 #default-input-content md-input-container.md-list-item-full-width {
         margin-left: 30px;
         padding-right: 64px; }
-      #user-interface-content .slide-02 #default-input-content md-input-container.icon-title {
+      #user-interface-content .slide-02 #default-input-content md-input-container.icon-title, #addTrans-content .slide-02 #default-input-content md-input-container.icon-title {
         padding-right: 30px; }
-        #user-interface-content .slide-02 #default-input-content md-input-container.icon-title i {
+        #user-interface-content .slide-02 #default-input-content md-input-container.icon-title i, #addTrans-content .slide-02 #default-input-content md-input-container.icon-title i {
           font-size: 22px;
           color: gray;
           position: absolute;
           margin-left: 30px;
           margin-top: 5px; }
-          #user-interface-content .slide-02 #default-input-content md-input-container.icon-title i.mail {
+          #user-interface-content .slide-02 #default-input-content md-input-container.icon-title i.mail, #addTrans-content .slide-02 #default-input-content md-input-container.icon-title i.mail {
             margin-left: 88%; }
-          #user-interface-content .slide-02 #default-input-content md-input-container.icon-title i.tel {
+          #user-interface-content .slide-02 #default-input-content md-input-container.icon-title i.tel, #addTrans-content .slide-02 #default-input-content md-input-container.icon-title i.tel {
             margin-left: 75%; }
-          #user-interface-content .slide-02 #default-input-content md-input-container.icon-title i.message {
+          #user-interface-content .slide-02 #default-input-content md-input-container.icon-title i.message, #addTrans-content .slide-02 #default-input-content md-input-container.icon-title i.message {
             margin-left: 88%; }
-        #user-interface-content .slide-02 #default-input-content md-input-container.icon-title input {
+        #user-interface-content .slide-02 #default-input-content md-input-container.icon-title input, #addTrans-content .slide-02 #default-input-content md-input-container.icon-title input {
           font-size: 16px;
           margin-left: 60px;
           background-color: transparent !important; }
-          #user-interface-content .slide-02 #default-input-content md-input-container.icon-title input.input-tel {
+          #user-interface-content .slide-02 #default-input-content md-input-container.icon-title input.input-tel, #addTrans-content .slide-02 #default-input-content md-input-container.icon-title input.input-tel {
             width: 200px; }
-          #user-interface-content .slide-02 #default-input-content md-input-container.icon-title input.input-mail {
+          #user-interface-content .slide-02 #default-input-content md-input-container.icon-title input.input-mail, #addTrans-content .slide-02 #default-input-content md-input-container.icon-title input.input-mail {
             width: 64%; }
-  #user-interface-content .slide-03 {
+  #user-interface-content .slide-03, #addTrans-content .slide-03 {
     top: 24%; }
-    #user-interface-content .slide-03 div.md-label {
+    #user-interface-content .slide-03 div.md-label, #addTrans-content .slide-03 div.md-label {
       width: 100%; }
-    #user-interface-content .slide-03 .switch-container {
+    #user-interface-content .slide-03 .switch-container, #addTrans-content .slide-03 .switch-container {
       margin-left: 20% !important; }
-    #user-interface-content .slide-03 .checkbox-container {
+    #user-interface-content .slide-03 .checkbox-container, #addTrans-content .slide-03 .checkbox-container {
       margin-left: 28% !important; }
-      #user-interface-content .slide-03 .checkbox-container md-checkbox .md-label {
+      #user-interface-content .slide-03 .checkbox-container md-checkbox .md-label, #addTrans-content .slide-03 .checkbox-container md-checkbox .md-label {
         padding-left: 10px; }
-    #user-interface-content .slide-03 .radio-container {
+    #user-interface-content .slide-03 .radio-container, #addTrans-content .slide-03 .radio-container {
       margin-left: 26% !important; }
-  #user-interface-content .slide-04 {
+  #user-interface-content .slide-04, #addTrans-content .slide-04 {
     top: 20%;
     padding-left: 6px; }
-    #user-interface-content .slide-04 md-card {
+    #user-interface-content .slide-04 md-card, #addTrans-content .slide-04 md-card {
       width: 240px;
       margin: auto; }
-  #user-interface-content .slide-05 {
+  #user-interface-content .slide-05, #addTrans-content .slide-05 {
     top: 40%;
     padding-left: 10px; }
-    #user-interface-content .slide-05 .col {
+    #user-interface-content .slide-05 .col, #addTrans-content .slide-05 .col {
       text-align: center; }
-    #user-interface-content .slide-05 a.material-background {
+    #user-interface-content .slide-05 a.material-background, #addTrans-content .slide-05 a.material-background {
       text-align: center;
       width: 200px;
       color: white !important; }
-    #user-interface-content .slide-05 p {
+    #user-interface-content .slide-05 p, #addTrans-content .slide-05 p {
       margin-top: 14px;
       padding-left: 11px;
       font-size: 20px;
       color: gray; }
-  #user-interface-content .slide-06 {
+  #user-interface-content .slide-06, #addTrans-content .slide-06 {
     top: 40%;
     padding-left: 10px; }
-    #user-interface-content .slide-06 .col {
+    #user-interface-content .slide-06 .col, #addTrans-content .slide-06 .col {
       text-align: center; }
-    #user-interface-content .slide-06 a.material-background {
+    #user-interface-content .slide-06 a.material-background, #addTrans-content .slide-06 a.material-background {
       width: 200px;
       color: white !important; }
-  #user-interface-content .slide-07 {
+  #user-interface-content .slide-07, #addTrans-content .slide-07 {
     top: 40%;
     padding-left: 10px; }
-    #user-interface-content .slide-07 .col {
+    #user-interface-content .slide-07 .col, #addTrans-content .slide-07 .col {
       text-align: center; }
-    #user-interface-content .slide-07 a.material-background {
+    #user-interface-content .slide-07 a.material-background, #addTrans-content .slide-07 a.material-background {
       width: 200px;
       color: white !important; }
-  #user-interface-content .slide-08 {
+  #user-interface-content .slide-08, #addTrans-content .slide-08 {
     top: 35%;
     text-align: center; }
-    #user-interface-content .slide-08 md-menu {
+    #user-interface-content .slide-08 md-menu, #addTrans-content .slide-08 md-menu {
       font-size: 16px;
       color: gray; }
-    #user-interface-content .slide-08 md-select {
+    #user-interface-content .slide-08 md-select, #addTrans-content .slide-08 md-select {
       margin-top: -20px; }
-      #user-interface-content .slide-08 md-select md-select-label {
+      #user-interface-content .slide-08 md-select md-select-label, #addTrans-content .slide-08 md-select md-select-label {
         width: 200px; }
-  #user-interface-content .slide-09 {
+  #user-interface-content .slide-09, #addTrans-content .slide-09 {
     text-align: center;
     top: 40%; }
-    #user-interface-content .slide-09 .ui-progress-circular {
+    #user-interface-content .slide-09 .ui-progress-circular, #addTrans-content .slide-09 .ui-progress-circular {
       position: fixed;
       left: 44%; }
-    #user-interface-content .slide-09 .ui-progress-circular-content {
+    #user-interface-content .slide-09 .ui-progress-circular-content, #addTrans-content .slide-09 .ui-progress-circular-content {
       margin-top: 80px !important;
       font-size: 18px; }
-  #user-interface-content .slide-10 {
+  #user-interface-content .slide-10, #addTrans-content .slide-10 {
     top: 30%;
     padding: 30px; }
-    #user-interface-content .slide-10 md-tabs {
+    #user-interface-content .slide-10 md-tabs, #addTrans-content .slide-10 md-tabs {
       border-top: #E1E1E1;
       border-top-style: solid;
       border-width: 1px; }
-      #user-interface-content .slide-10 md-tabs md-content {
+      #user-interface-content .slide-10 md-tabs md-content, #addTrans-content .slide-10 md-tabs md-content {
         padding: 20px; }
-  #user-interface-content .slide-11 {
+  #user-interface-content .slide-11, #addTrans-content .slide-11 {
     top: 16%;
     padding: 20px; }
-  #user-interface-content .slide-12 {
+  #user-interface-content .slide-12, #addTrans-content .slide-12 {
     top: 20%; }
-    #user-interface-content .slide-12 md-whiteframe {
+    #user-interface-content .slide-12 md-whiteframe, #addTrans-content .slide-12 md-whiteframe {
       background: #fff;
       margin: 20px;
       padding: 20px;
       height: 40px; }
-  #user-interface-content .slide-13 {
+  #user-interface-content .slide-13, #addTrans-content .slide-13 {
     background: url(../img/slide_01.png);
     background-repeat: no-repeat;
     background-size: 100%; }

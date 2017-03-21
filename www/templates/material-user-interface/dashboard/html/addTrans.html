@@ -1,0 +1,49 @@
+<!--View Information-->
+<!--View name : Dashboard Setting-->
+<!--Controller name : dashboardSettingCtrl-->
+<!--Controller path : www/templates/material-user-interface/dashboard/js/controllers.js-->
+<!--State name : app.dashboardSetting-->
+<!--URL : #app/dashboardSetting-->
+
+<ion-view title="">
+    <!--left button on navigation bar-->
+    <ion-nav-buttons side="left">
+        <a ng-click="$ionicGoBack()" class="button back-button buttons  button-clear header-item nav-back-btn">
+            <i class="ion-android-arrow-back "></i>
+        </a>
+    </ion-nav-buttons><!--end left button on navigation bar-->
+	<!--toolbar section-->
+    <md-toolbar class="bar-subheader md-tall md-primary toolbar-medium">
+        <div>
+            <h1>Add a new transaction</h1>
+
+        </div>
+    </md-toolbar><!--end toolbar section-->
+
+    <ion-content scroll="false" id="addTrans-content" >
+        <form name="contractForm" class="slide-02">
+                <ion-content id="default-input-content">
+                	<md-select ng-model="transType" aria-label="md-option">
+                        <md-option value="buy">Buy</md-option>
+                        <md-option value="sell">Sell</md-option>
+                    </md-select>
+                    <md-select ng-model="fundSelection" aria-label="md-option">
+                        <md-option ng-repeat="fund in fundList" value="{{fund.nid}}">{{fund.title}}</md-option>
+                    </md-select>
+                    <md-input-container md-no-float=""  class="icon-title">
+                    <i class="ion-cash"></i>
+                        <input placeholder="Amount">
+                    </md-input-container>
+                    <md-input-container md-no-float=""  class="icon-title">
+                        <i class="ion-calculator"></i>
+                        <input name="email" placeholder="Number of units">
+                    </md-input-container>
+                    <md-input-container class="icon-title" md-no-float>
+                        <i class="ion-calendar"></i>
+                        <input name="password" placeholder="Date Of Transaction">
+                    </md-input-container>
+                    
+                </ion-content>
+            </form>
+    </ion-content>
+</ion-view>

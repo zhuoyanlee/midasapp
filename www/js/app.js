@@ -330,6 +330,15 @@ angular.module('starter', ['ionic','ngIOS9UIWebViewPatch', 'starter.controllers'
                     }
                 }
             })
+            .state('app.addtrans', {
+                url: "/addTrans",
+                views: {
+                    'menuContent': {
+                        templateUrl: "templates/material-user-interface/dashboard/html/addTrans.html",
+                        controller: 'dashboardCtrl'
+                    }
+                }
+            })
             .state('app.dashboardSetting', {
                 url: "/dashboardSetting",
                 views: {

@@ -1,5 +1,5 @@
 // Controller of dashboard.
-appControllers.controller('dashboardCtrl', function ($scope, $timeout, $state,$stateParams, $ionicHistory) {
+appControllers.controller('dashboardCtrl', function ($scope, $timeout, $state,$stateParams, $ionicHistory,$mdDialog, $http) {
 
     //$scope.isAnimated is the variable that use for receive object data from state params.
     //For enable/disable row animation.
@@ -29,7 +29,33 @@ appControllers.controller('dashboardCtrl', function ($scope, $timeout, $state,$s
     $scope.goToSetting = function () {
         $state.go("app.dashboardSetting");
     };// End goToSetting.
+    
+    $scope.addTransDialog = function ($event) {
+        $mdDialog.show({
+            controller: 'DialogController',
+            templateUrl: 'confirm-dialog.html',
+            targetEvent: $event,
+            locals: {
+                displayOption: {
+                    title: "Alert dialog !!",
+                    content: "Alert dialog",
+                    ok: "Confirm",
+                    cancel: "Close"
+                }
+            }
+        }).then(function () {
+            $scope.dialogResult = "You choose Confirm!"
+        });
+    };
 
+	$http({
+		method : 'GET',
+		url : 'http://dev-project-midas.pantheonsite.io' + "/funds/list-autocomplete",
+		headers: { 'Authorization': 'Basic ' + btoa('alex:b45k3t')},
+		cache : true, // FIXME need to put an expiry to the cache somehow
+	}).then(function(response) {
+		$scope.fundList = response.data;
+	});
 }); // End of dashboard controller.
 
 // Controller of Dashboard Setting.

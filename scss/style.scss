@@ -1684,7 +1684,7 @@ md-sidenav {
 }//end try app section
 
 //dashboard section
-#dashboard-content {
+#dashboard-content, #addTrans-content {
   margin-top: 164px;
   .menu-more {
     text-align: right;
@@ -1711,7 +1711,7 @@ md-sidenav {
 }//end dashboard section
 
 //user interface section
-#user-interface-content {
+#user-interface-content, #addTrans-content {
   height: 100%;
   //slide section
   .slider {
@@ -1767,8 +1767,8 @@ md-sidenav {
     top: 14%;
     #default-input-content {
       margin: 20px 20px 0 34px;
-
-      md-input-container.md-list-item-full-width {
+     
+      md-select, md-input-container.md-list-item-full-width {
         margin-left: 30px;
         padding-right: 64px;
       }
