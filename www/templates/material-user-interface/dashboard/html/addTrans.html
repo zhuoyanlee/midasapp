@@ -20,30 +20,21 @@
         </div>
     </md-toolbar><!--end toolbar section-->
 
-    <ion-content scroll="false" id="addTrans-content" >
-        <form name="contractForm" class="slide-02">
-                <ion-content id="default-input-content">
-                	<md-select ng-model="transType" aria-label="md-option">
-                        <md-option value="buy">Buy</md-option>
-                        <md-option value="sell">Sell</md-option>
-                    </md-select>
-                    <md-select ng-model="fundSelection" aria-label="md-option">
-                        <md-option ng-repeat="fund in fundList" value="{{fund.nid}}">{{fund.title}}</md-option>
-                    </md-select>
-                    <md-input-container md-no-float=""  class="icon-title">
-                    <i class="ion-cash"></i>
-                        <input placeholder="Amount">
-                    </md-input-container>
-                    <md-input-container md-no-float=""  class="icon-title">
-                        <i class="ion-calculator"></i>
-                        <input name="email" placeholder="Number of units">
-                    </md-input-container>
-                    <md-input-container class="icon-title" md-no-float>
-                        <i class="ion-calendar"></i>
-                        <input name="password" placeholder="Date Of Transaction">
-                    </md-input-container>
-                    
-                </ion-content>
-            </form>
+    <ion-content scroll="false" id="dashboard-content">
+      <div class="row">
+          <div class="col text-center">
+                  <a class="md-button md-accent md-fab" aria-label="Shop" ng-click="navigateTo('app.txfundselection', 'txtype', 'buy')">
+                      <i class="fa fa-shopping-cart"></i>
+                  </a>
+                </div>
+          <div class="col text-center">
+
+                  <a class="md-button md-accent md-fab" aria-label="Call">
+                      <i class="ion-android-call"></i>
+                  </a>
+          </div>
+    </div>
+
+
     </ion-content>
 </ion-view>

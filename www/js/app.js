@@ -330,11 +330,29 @@ angular.module('starter', ['ionic','ngIOS9UIWebViewPatch', 'starter.controllers'
                     }
                 }
             })
-            .state('app.addtrans', {
+            .state('app.txtype', {
                 url: "/addTrans",
                 views: {
                     'menuContent': {
                         templateUrl: "templates/material-user-interface/dashboard/html/addTrans.html",
+                        controller: 'dashboardCtrl'
+                    }
+                }
+            })
+            .state('app.txfundselection', {
+                url: "/addTrans/:txtype",
+                views: {
+                    'menuContent': {
+                        templateUrl: "templates/material-user-interface/dashboard/html/addTrans2.html",
+                        controller: 'dashboardCtrl'
+                    }
+                }
+            })
+            .state('app.txdetails', {
+                url: "/addTrans/:txtype/:fundSelected",
+                views: {
+                    'menuContent': {
+                        templateUrl: "templates/material-user-interface/dashboard/html/addTrans3.html",
                         controller: 'dashboardCtrl'
                     }
                 }

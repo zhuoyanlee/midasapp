@@ -1797,3 +1797,32 @@ md-sidenav {
         color: gray; }
   #map-and-location div.map-input-option div.footer {
     margin-top: 24px; }
+
+.myForm md-input-container {
+  margin: 0 auto;
+  width: 60%;
+  padding: 10% 0; }
+
+.myForm button.md-button {
+  margin: 0 auto;
+  width: 30%; }
+
+.myForm md-input-container input[type='text'] {
+  font-size: 36px;
+  text-align: center;
+  padding: 20%;
+  border: 1px solid #efefef; }
+
+#funds {
+  display: table; }
+
+#funds .col {
+  background: #e2e2e2;
+  width: 128px;
+  height: 128px;
+  border: 1px solid #ffffff;
+  display: table-cell;
+  vertical-align: middle; }
+
+.text-center {
+  text-align: center; }
