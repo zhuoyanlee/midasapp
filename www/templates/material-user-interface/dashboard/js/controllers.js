@@ -1,5 +1,5 @@
 // Controller of dashboard.
-appControllers.controller('dashboardCtrl', function ($scope, $timeout, $state,$stateParams, $ionicHistory,$mdDialog, $http) {
+appControllers.controller('dashboardCtrl', function ($scope, $timeout, $state,$stateParams, $ionicHistory,$mdDialog, $http, $ionicLoading) {
 
     //$scope.isAnimated is the variable that use for receive object data from state params.
     //For enable/disable row animation.
@@ -52,7 +52,11 @@ appControllers.controller('dashboardCtrl', function ($scope, $timeout, $state,$s
        console.log("fundDtls:  " + $stateParams.fundSelected);
 
     		//var transact_date = formatDateString($scope.transact_date);
-
+        $ionicLoading.show({
+      template: 'Loading...'
+    }).then(function(){
+       console.log("The loading indicator is now displayed");
+    });
 
 
     		var package = {
@@ -72,16 +76,16 @@ appControllers.controller('dashboardCtrl', function ($scope, $timeout, $state,$s
     				"target_id" : '282'
     			}],
     			"field_transaction_type" : [{
-    				"value" : $scope.txtype
+    				"value" : $stateParams.txtype
     			}],
     			"field_number_of_units" : [{
     				"value" : $scope.form.units
     			}],
     			"field_fund" : [{
-    				"target_id" : $scope.fund
+    				"target_id" : $stateParams.fundSelected
     			}]
     		};
-/*
+
     		$http({
     			method : 'POST',
     			url : 'http://dev-project-midas.pantheonsite.io' + '/entity/node',
@@ -89,7 +93,9 @@ appControllers.controller('dashboardCtrl', function ($scope, $timeout, $state,$s
     			data : package
     		}).then(function(data) {
     			console.log("Transaction Successfully created");
-    		});*/
+          $ionicLoading.hide();
+          $scope.navigateTo("app.txsuccess",null,null);
+    		});
     };
 
     $scope.addTransDialog = function ($event) {

@@ -1,0 +1,43 @@
+<!--View Information-->
+<!--View name : Dashboard Setting-->
+<!--Controller name : dashboardSettingCtrl-->
+<!--Controller path : www/templates/material-user-interface/dashboard/js/controllers.js-->
+<!--State name : app.dashboardSetting-->
+<!--URL : #app/dashboardSetting-->
+
+<ion-view title="">
+    <!--left button on navigation bar-->
+    <ion-nav-buttons side="left">
+        <a ng-click="$ionicGoBack()" class="button back-button buttons  button-clear header-item nav-back-btn">
+            <i class="ion-android-arrow-back "></i>
+        </a>
+    </ion-nav-buttons><!--end left button on navigation bar-->
+	<!--toolbar section-->
+    <md-toolbar class="bar-subheader md-tall md-primary toolbar-medium">
+        <div>
+            <h1>Amount</h1>
+            <h5>Enter the amount to invest</h5>
+
+        </div>
+    </md-toolbar><!--end toolbar section-->
+
+    <ion-content scroll="false" id="addTrans-content" >
+        <form name="addTransactionForm" class="myForm" novalidate>
+                <ion-content id="default-input-content">
+                  <div class="row">
+                      <md-input-container md-no-float=""  class="icon-title">
+
+                          <input ng-model="form.amount" name="amount" type="text" placeholder="$ Amount" ng-required="true" form-validate-after>
+                      </md-input-container>
+
+                      <p ng-show="addTransactionForm.amount.$invalid && !addTransactionForm.amount.$pristine" class="help-block">Amount is required.</p>
+
+                  </div>
+                  <div class="row text-center">
+                      <button ng-click="addTransaction()" ng-disabled="addTransactionForm.$invalid" class="md-raised md-button md-default-theme">Submit</button>
+
+                  </div>
+                </ion-content>
+            </form>
+    </ion-content>
+</ion-view>

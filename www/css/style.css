@@ -1798,31 +1798,59 @@ md-sidenav {
   #map-and-location div.map-input-option div.footer {
     margin-top: 24px; }
 
+.full-screen-content {
+  background-color: #eb6660;
+  padding-top: 44px;
+  width: 100%;
+  height: 100%; }
+  .full-screen-content .scroll {
+    height: 100%;
+    align-items: center; }
+  .full-screen-content h1, .full-screen-content h2, .full-screen-content h3, .full-screen-content h4, .full-screen-content h5, .full-screen-content .success-icon {
+    color: #fff; }
+  .full-screen-content button {
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 0px;
+    width: 100%; }
+
 .myForm md-input-container {
   margin: 0 auto;
   width: 60%;
   padding: 10% 0; }
+  .myForm md-input-container input[type='text'] {
+    font-size: 36px;
+    text-align: center;
+    padding: 20%;
+    border: 1px solid #efefef; }
 
 .myForm button.md-button {
   margin: 0 auto;
   width: 30%; }
 
-.myForm md-input-container input[type='text'] {
-  font-size: 36px;
-  text-align: center;
-  padding: 20%;
-  border: 1px solid #efefef; }
-
 #funds {
   display: table; }
-
-#funds .col {
-  background: #e2e2e2;
-  width: 128px;
-  height: 128px;
-  border: 1px solid #ffffff;
-  display: table-cell;
-  vertical-align: middle; }
+  #funds .col {
+    background: #e2e2e2;
+    width: 128px;
+    height: 128px;
+    border: 1px solid #ffffff;
+    display: table-cell;
+    vertical-align: middle; }
 
 .text-center {
   text-align: center; }
+
+.success-icon {
+  font-size: 100px;
+  margin: 0 auto; }
+
+.big-button {
+  background-color: #fff;
+  padding: 50px 0;
+  display: block;
+  width: 99%;
+  border-radius: 3px;
+  border: 1px solid #fff;
+  color: #eb6660;
+  font-size: 30px; }

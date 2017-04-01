@@ -2826,9 +2826,47 @@ md-sidenav {
     }//end footer section
   }//end map input option section
 }//end map and location section
-.myForm md-input-container {margin:0 auto; width:60%; padding: 10% 0;}
-.myForm button.md-button {margin:0 auto; width:30%;}
-.myForm md-input-container input[type='text']{font-size:36px; text-align:center; padding:20%; border: 1px solid #efefef;}
-#funds {display: table;}
-#funds .col { background: #e2e2e2;width: 128px; height:128px; border: 1px solid #ffffff;display: table-cell;vertical-align: middle;}
+.full-screen-content {
+  background-color:$primary;
+  padding-top:44px;
+  width:100%;
+  height:100%;
+
+  .scroll {
+    height: 100%;
+    align-items: center;
+  }
+
+  h1,h2,h3,h4,h5,.success-icon{
+    color:#fff;
+  }
+  button{
+    margin:0 auto;
+    background-color:#fff;
+    border-radius:0px;
+    width:100%;
+  }
+}
+.myForm {
+  md-input-container {
+    margin:0 auto; width:60%; padding: 10% 0;
+    input[type='text']{font-size:36px; text-align:center; padding:20%; border: 1px solid #efefef;}
+  }
+  button.md-button {margin:0 auto; width:30%;}
+}
+#funds {
+  display: table;
+  .col { background: #e2e2e2;width: 128px; height:128px; border: 1px solid #ffffff;display: table-cell;vertical-align: middle;}
+}
 .text-center { text-align:center;}
+.success-icon { font-size: 100px; margin: 0 auto;}
+.big-button {
+  background-color:#fff;
+  padding:50px 0;
+  display:block;
+  width: 99%;
+  border-radius:3px;
+  border:1px solid #fff;
+  color:$primary;
+  font-size:30px;
+}

@@ -357,6 +357,15 @@ angular.module('starter', ['ionic','ngIOS9UIWebViewPatch', 'starter.controllers'
                     }
                 }
             })
+            .state('app.txsuccess', {
+                url: "/addTrans/:txtype/:fundSelected/success",
+                views: {
+                    'menuContent': {
+                        templateUrl: "templates/material-user-interface/dashboard/html/addTrans4.html",
+                        controller: 'dashboardCtrl'
+                    }
+                }
+            })
             .state('app.dashboardSetting', {
                 url: "/dashboardSetting",
                 views: {

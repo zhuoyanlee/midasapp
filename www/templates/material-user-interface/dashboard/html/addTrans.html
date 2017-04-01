@@ -5,36 +5,48 @@
 <!--State name : app.dashboardSetting-->
 <!--URL : #app/dashboardSetting-->
 
-<ion-view title="">
+<ion-view title="Choose your transaction">
     <!--left button on navigation bar-->
     <ion-nav-buttons side="left">
         <a ng-click="$ionicGoBack()" class="button back-button buttons  button-clear header-item nav-back-btn">
             <i class="ion-android-arrow-back "></i>
         </a>
     </ion-nav-buttons><!--end left button on navigation bar-->
-	<!--toolbar section-->
-    <md-toolbar class="bar-subheader md-tall md-primary toolbar-medium">
-        <div>
-            <h1>Add a new transaction</h1>
 
-        </div>
-    </md-toolbar><!--end toolbar section-->
+    <ion-content class="full-screen-content">
 
-    <ion-content scroll="false" id="dashboard-content">
-      <div class="row">
+      <!--  <div class="row">
+            <div class="col-50 text-center">
+
+                    <a class="big-button" aria-label="Buy" ng-click="navigateTo('app.txfundselection', 'txtype', 'buy')">
+                        <i class="fa fa-shopping-cart"></i><br/><br/>
+                        Buy
+                    </a>
+                  </div>
+            <div class="col-50 text-center">
+
+              <a class="big-button" aria-label="Sell" ng-click="navigateTo('app.txfundselection', 'txtype', 'sell')">
+                  <i class="fa fa-money"></i><br/><br/>
+                  Sell
+              </a>
+            </div>
+        </div>-->
+        <div class="row">
           <div class="col text-center">
-                  <a class="md-button md-accent md-fab" aria-label="Shop" ng-click="navigateTo('app.txfundselection', 'txtype', 'buy')">
-                      <i class="fa fa-shopping-cart"></i>
-                  </a>
-                </div>
-          <div class="col text-center">
-
-                  <a class="md-button md-accent md-fab" aria-label="Call">
-                      <i class="ion-android-call"></i>
-                  </a>
+            <a class="big-button" aria-label="Sell" ng-click="navigateTo('app.txfundselection', 'txtype', 'buy')">
+              <i class="fa fa-shopping-cart"></i><br/><br/>
+              Buy
+            </a>
           </div>
-    </div>
-
+        </div>
+        <div class="row">
+          <div class="col text-center">
+            <a class="big-button" aria-label="Sell" ng-click="navigateTo('app.txfundselection', 'txtype', 'sell')">
+                <i class="fa fa-money"></i><br/><br/>
+                Sell
+            </a>
+          </div>
+        </div>
 
     </ion-content>
 </ion-view>

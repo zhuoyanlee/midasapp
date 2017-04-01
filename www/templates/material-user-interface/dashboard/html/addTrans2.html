@@ -1,0 +1,33 @@
+<!--View Information-->
+<!--View name : Dashboard Setting-->
+<!--Controller name : dashboardSettingCtrl-->
+<!--Controller path : www/templates/material-user-interface/dashboard/js/controllers.js-->
+<!--State name : app.dashboardSetting-->
+<!--URL : #app/dashboardSetting-->
+
+<ion-view title="">
+    <!--left button on navigation bar-->
+    <ion-nav-buttons side="left">
+        <a ng-click="$ionicGoBack()" class="button back-button buttons  button-clear header-item nav-back-btn">
+            <i class="ion-android-arrow-back "></i>
+        </a>
+    </ion-nav-buttons><!--end left button on navigation bar-->
+	<!--toolbar section-->
+    <md-toolbar class="bar-subheader md-tall md-primary toolbar-medium">
+        <div>
+            <h1>Select a fund</h1>
+            <h5>Tap on the fund you want to invest in</h5>
+        </div>
+    </md-toolbar><!--end toolbar section-->
+
+    <ion-content scroll="false" id="addTrans-content" >
+                <ion-content id="default-input-content" ng-init="loadFunds()">
+                    <div id="funds" class="row" ng-repeat="rows in fundList">
+                      <div class="col text-center" ng-repeat="fund in rows">
+                        <a ng-click="navigateTo('app.txdetails', 'fundSelected', fund.nid)"><strong>{{fund.field_bloomberg_symbol}}</strong> <br />{{fund.title}}</a>
+                      </div>
+                    </div>
+
+                </ion-content>
+    </ion-content>
+</ion-view>
