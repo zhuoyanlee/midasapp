@@ -125,6 +125,7 @@ appControllers.controller('dashboardCtrl', function ($scope, $timeout, $state,$s
       		headers: { 'Authorization': 'Basic ' + btoa('alex:b45k3t')},
       		cache : true, // FIXME need to put an expiry to the cache somehow
       	}).then(function(response) {
+      		$scope.loaded = true; // unload spinner
       		$scope.fundList = chunk(response.data, 2);
       	});
     };

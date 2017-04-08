@@ -22,6 +22,9 @@
 
     <ion-content scroll="false" id="addTrans-content" >
                 <ion-content id="default-input-content" ng-init="loadFunds()">
+                	<div class="ui-progress-circular text-center">
+		                <ion-spinner ng-if="!loaded" class="progress-circular"></ion-spinner>
+		            </div>
                     <div id="funds" class="row" ng-repeat="rows in fundList">
                       <div class="col text-center" ng-repeat="fund in rows">
                         <a ng-click="navigateTo('app.txdetails', 'fundSelected', fund.nid)"><strong>{{fund.field_bloomberg_symbol}}</strong> <br />{{fund.title}}</a>
