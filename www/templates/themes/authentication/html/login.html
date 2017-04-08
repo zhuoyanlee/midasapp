@@ -1,0 +1,30 @@
+<!--View Information-->
+<!--View name : Fake Login-->
+<!--State name : app.fakeLogin-->
+<!--URL : #app/fakeLogin-->
+
+<ion-view title="Sign In">
+  
+    <!--login content section-->
+    <ion-content id="social-login" class="bg-white" scroll="false">
+        <!--fake login form section-->
+       <form name="loginForm" class="fakeLogin-form" novalidate>
+           
+
+            <div id="fakeLogin">
+                <md-input-container md-no-float="">
+                    <input ng-model="form.username" class="user-name" placeholder="Username" ng-required="true" form-validate-after>
+                </md-input-container>
+                <hr/>
+                <md-input-container md-no-float="">
+                    <input ng-model="form.password" class="user-password" type="password" ng-required="true" placeholder="Password" form-validate-after>
+                </md-input-container>
+            </div>
+            <div>
+                <button type="submit" ng-click="login()" class="md-raised social-button md-button md-default-theme material-background">
+                    Sign In
+                </button>
+            </div>
+        </form> <!--end fake login form section-->
+    </ion-content><!--end login content section-->
+</ion-view>

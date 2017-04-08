@@ -27,7 +27,7 @@
                   <div class="row">
                       <md-input-container md-no-float=""  class="icon-title">
 
-                          <input ng-model="form.amount" name="amount" type="text" placeholder="$ Amount" ng-required="true" form-validate-after>
+                          <input ng-model="form.amount" name="amount" type="number" placeholder="$ Amount" ng-required="true" form-validate-after>
                       </md-input-container>
 
                       <p ng-show="addTransactionForm.amount.$invalid && !addTransactionForm.amount.$pristine" class="help-block">Amount is required.</p>

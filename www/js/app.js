@@ -38,7 +38,7 @@ window.globalVariable = {
     adMob: "your_api_key" //Use for AdMob API clientID.
 };// End Global variable
 
-angular.module('starter', ['ionic','ngIOS9UIWebViewPatch', 'starter.controllers', 'starter.services', 'ngMaterial', 'ngMessages', 'ngCordova', 'chart.js'])
+angular.module('starter', ['ionic','ngIOS9UIWebViewPatch', 'starter.controllers', 'starter.services', 'ngMaterial', 'ngMessages', 'ngCordova', 'chart.js', 'ngCookies'])
     .run(function ($ionicPlatform, $cordovaSQLite, $rootScope, $ionicHistory, $state, $mdDialog, $mdBottomSheet) {
 
         //Create database table of contracts by using sqlite database.
@@ -317,6 +317,16 @@ angular.module('starter', ['ionic','ngIOS9UIWebViewPatch', 'starter.controllers'
                 abstract: true,
                 templateUrl: "templates/menu/html/menu.html",
                 controller: 'menuCtrl'
+            })
+            .state('app.login', {
+                url: "/login",
+                cache: false,
+                views: {
+                    'menuContent': {
+                        templateUrl: "templates/themes/authentication/html/login.html",
+                        controller: 'loginCtrl'
+                    }
+                }
             })
             .state('app.dashboard', {
                 url: "/dashboard",

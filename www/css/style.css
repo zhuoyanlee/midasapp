@@ -1816,9 +1816,9 @@ md-sidenav {
 
 .myForm md-input-container {
   margin: 0 auto;
-  width: 60%;
+  width: 80%;
   padding: 10% 0; }
-  .myForm md-input-container input[type='text'] {
+  .myForm md-input-container input[type='number'] {
     font-size: 36px;
     text-align: center;
     padding: 20%;
@@ -1826,7 +1826,7 @@ md-sidenav {
 
 .myForm button.md-button {
   margin: 0 auto;
-  width: 30%; }
+  width: 50%; }
 
 #funds {
   display: table; }

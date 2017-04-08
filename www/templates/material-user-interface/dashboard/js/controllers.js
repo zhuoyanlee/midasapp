@@ -1,5 +1,5 @@
 // Controller of dashboard.
-appControllers.controller('dashboardCtrl', function ($scope, $timeout, $state,$stateParams, $ionicHistory,$mdDialog, $http, $ionicLoading) {
+appControllers.controller('dashboardCtrl', function (auth,$scope, $timeout, $state,$stateParams, $ionicHistory,$mdDialog, $http, $ionicLoading, $location) {
 
     //$scope.isAnimated is the variable that use for receive object data from state params.
     //For enable/disable row animation.
@@ -10,6 +10,15 @@ appControllers.controller('dashboardCtrl', function ($scope, $timeout, $state,$s
   	$scope.data = [300, 500, 100];
     $scope.form = {};
 
+	$scope.loadPortfolio = function () {
+		if(!auth.isAuthed()) {
+			$location.path('/app/login');
+		} else {
+			console.log("user is authenticated");
+			
+		}
+	};
+	
     // navigateTo is for navigate to other page
     // by using targetPage to be the destination state.
     // Parameter :
