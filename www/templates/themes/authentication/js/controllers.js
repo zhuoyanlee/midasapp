@@ -1,8 +1,11 @@
 appControllers
-.service('auth',  authService);
+.service('auth',  authService)
+.config(function($httpProvider) {
+  $httpProvider.interceptors.push(authInterceptor);
+});
 
 // Controller of Dashboard Setting.
-appControllers.controller('loginCtrl', ['auth', '$scope', '$http', '$state', '$ionicHistory', '$ionicViewSwitcher', '$cookies', '$location', function (auth, $scope, $http, $state,$ionicHistory,$ionicViewSwitcher, $cookies, $location) {
+appControllers.controller('loginCtrl', ['auth', '$scope', '$http', '$state', '$ionicHistory', '$ionicViewSwitcher', '$cookies', '$location', 'endpoint', function (auth, $scope, $http, $state,$ionicHistory,$ionicViewSwitcher, $cookies, $location, endpoint) {
 	
 
 	$scope.form = {};
@@ -17,7 +20,7 @@ appControllers.controller('loginCtrl', ['auth', '$scope', '$http', '$state', '$i
 		if(!auth.isAuthed()) {
 
 			$cookies.put('authString', btoa($scope.form.username + ":" + $scope.form.password));
-			login($http, $scope.form.username, $scope.form.password, $cookies, $location, $scope);
+			login($http, $scope.form.username, $scope.form.password, $cookies, $location, $scope, endpoint);
 		} else {
 			$location.path('/app/dashboard');
 		}
@@ -31,10 +34,10 @@ appControllers.controller('loginCtrl', ['auth', '$scope', '$http', '$state', '$i
 }]); // End of Dashboard Setting controller.
 
 // Login functions
-function login($http, username, password, $cookies, $location,$scope) {
+function login($http, username, password, $cookies, $location,$scope, endpoint) {
 	$http({
 		method : 'POST',
-		url : 'http://dev-project-midas.pantheonsite.io' + '/user/login?_format=json',
+		url : endpoint + '/user/login?_format=json',
 		data : {
 			name : username,
 			pass : password
@@ -102,12 +105,14 @@ function getToken($cookies) {
 		});
 }
 
-function getUserDetails($http, uid) {
+function getUserDetails($http, $cookies, uid) {
 	$http({
 		method : 'GET',
-		url : 'http://dev-project-midas.pantheonsite.io' + '/user/' +uid + '?format=json'
+		headers: { 'Authorization': 'Basic ' + $cookies.get('authString')},
+		url : 'http://dev-project-midas.pantheonsite.io' + '/user/' +uid + '?_format=json'
 	}).then(function(res) {
-		$cookies.put("clientId", data.field_client_ref.target_id);
+		console.log(res.data);
+		$cookies.put("clientId", res.data.field_client_ref[0].target_id);
 		console.log("CLient ID: " + $cookies.get("clientId"));
 	});
 }
