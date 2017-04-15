@@ -18,7 +18,8 @@
     <!--toolbar section-->
     <md-toolbar class="bar-subheader md-tall md-primary toolbar-medium">
         <div>
-            <h1>RM254,333.90</h1>
+        		
+            <h1 ng-if="loaded">{{totalInvestment|currency}}</h1>
 
             <h2>Current Investment Amount</h2>
         </div>
@@ -33,7 +34,10 @@
     <!--dashboard section-->
     <ion-content id="dashboard-content">
     <md-subheader class="md-warn">Portfolio</md-subheader>
-	
+	<div class="ui-progress-circular text-center">
+        <ion-spinner ng-if="!loaded" class="progress-circular"></ion-spinner>
+    </div>
+    
 	<!-- Investment portfolio pie chart -->
 	<canvas class="chart chart-pie"
 	chart-data="data" chart-labels="labels" chart-colors="chart_colors" chart-options="clientFundDataOptions"></canvas>

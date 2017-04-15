@@ -350,10 +350,19 @@ angular.module('starter', ['ionic','ngIOS9UIWebViewPatch', 'starter.controllers'
                 }
             })
             .state('app.txfundselection', {
-                url: "/addTrans/:txtype",
+                url: "/addTrans/buy",
                 views: {
                     'menuContent': {
                         templateUrl: "templates/material-user-interface/dashboard/html/addTrans2.html",
+                        controller: 'dashboardCtrl'
+                    }
+                }
+            })
+            .state('app.txsellselection', {
+                url: "/addTrans/sell",
+                views: {
+                    'menuContent': {
+                        templateUrl: "templates/material-user-interface/dashboard/html/sell-selections.html",
                         controller: 'dashboardCtrl'
                     }
                 }

@@ -10,7 +10,6 @@ appControllers.controller('fundsListCtrl', function ($http, $scope,$stateParams,
         $http({
 			method : 'GET',
 			url : 'http://dev-project-midas.pantheonsite.io' + "/funds/list",
-			headers: { 'Authorization': 'Basic ' + btoa('alex:b45k3t')},
 			cache : true, // FIXME need to put an expiry to the cache somehow
 		}).then(function(response) {
 			$scope.fundList = response.data;
