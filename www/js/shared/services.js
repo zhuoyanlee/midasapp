@@ -1,10 +1,10 @@
-function authService($http, $cookies) {
+function authService($http, $localStorage) {
 	var self = this;
 
 	self.isAuthed = function() {
-		console.log("Auth String: " + $cookies.get('authString'));
+		console.log("Auth String: " + $localStorage.authString);
 
-		if ($cookies.get('authString') && $cookies.get('authString').length > 0 && $cookies.get('sessionToken') && $cookies.get('sessionToken').length > 0) {
+		if ($localStorage.authString && $localStorage.authString.length > 0 && $localStorage.sessionToken && $localStorage.sessionToken.length > 0) {
 			return true;
 		} else {
 			return false;
@@ -14,7 +14,7 @@ function authService($http, $cookies) {
 
 }
 
-function clientService($http, $cookies, endpoint) {
+function clientService($http, $localStorage, endpoint) {
 	var self = this;
 	
 	// Get Client's portfolio chart breakdown
@@ -30,7 +30,7 @@ function clientService($http, $cookies, endpoint) {
 	
 		$http({
 			method : 'GET',
-			url : endpoint + "/client/" + $cookies.get('clientId') + "/funds"
+			url : endpoint + "/client/" + $localStorage.clientId + "/funds"
 		}).then(function(response) {
 			$scope.totalInitialInvestment=0;
 			$scope.totalInvestment = 0;
@@ -137,14 +137,14 @@ function clientService($http, $cookies, endpoint) {
     };
 }
 
-function authInterceptor($location, $cookies, $injector, $q) {
+function authInterceptor($localStorage) {
 
 	return {
 		// automatically attach Authorization header
 		'request' : function(req) {
-			if (req.url.indexOf("/user/l") <= 0 && req.url.indexOf("https://safe-temple-72604.herokuapp.com")<=0 && $cookies.get('authString')) {
+			if (req.url.indexOf("/user/l") <= 0 && req.url.indexOf("https://safe-temple-72604.herokuapp.com")<=0 && $localStorage.authString) {
 				console.log("Inserting Basic authentication header");
-				req.headers.Authorization = 'Basic ' + $cookies.get('authString');
+				req.headers.Authorization = 'Basic ' + $localStorage.authString;
 
 			}
 			return req;
@@ -158,9 +158,7 @@ function authInterceptor($location, $cookies, $injector, $q) {
 
 			if (res.status == "403" || res.status == "401") {
 				console.log("Unauthorized or Forbidden");
-				$injector.get('$state').transitionTo('empty');
-				//notificationService.error("Your session has timed out, Please login again.");
-				return $location.path('/login');
+				
 
 			}
 

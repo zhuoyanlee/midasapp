@@ -1,8 +1,5 @@
-appControllers
-.service('client',  clientService);
-
 // Controller of dashboard.
-appControllers.controller('dashboardCtrl', ['auth', 'client', '$scope', '$cookies', '$timeout', '$state', '$stateParams', '$ionicHistory','$mdDialog', '$http', '$ionicLoading', '$location', 'endpoint', function (auth, clientService, $scope, $cookies, $timeout, $state,$stateParams, $ionicHistory,$mdDialog, $http, $ionicLoading, $location, endpoint) {
+appControllers.controller('dashboardCtrl', ['auth', 'client', '$scope', '$localStorage', '$timeout', '$state', '$stateParams', '$ionicHistory','$mdDialog', '$http', '$ionicLoading', '$location', 'endpoint', function (auth, clientService, $scope, $localStorage, $timeout, $state,$stateParams, $ionicHistory,$mdDialog, $http, $ionicLoading, $location, endpoint) {
 
     //$scope.isAnimated is the variable that use for receive object data from state params.
     //For enable/disable row animation.
@@ -14,11 +11,12 @@ appControllers.controller('dashboardCtrl', ['auth', 'client', '$scope', '$cookie
 	console.log("endpoint: " + endpoint);
 	
 	$scope.loadPortfolio = function () {
+		
 		if(!auth.isAuthed()) {
-			$location.path('/app/login');
+			$state.go("app.login");
 		} else {
 			$scope.loaded = false;
-			console.log("user is authenticated: " + $cookies.get('clientId'));
+			console.log("user is authenticated: " + $localStorage.clientId);
 			
 	  		getClientDetails() ;
 	  		clientService.getClientInvestmentBreakdown($scope);
@@ -30,8 +28,8 @@ appControllers.controller('dashboardCtrl', ['auth', 'client', '$scope', '$cookie
 
 			$http({
 				method : 'GET',
-				headers: { 'Authorization': 'Basic ' + $cookies.get('authString')},
-				url : endpoint + "/client/" + $cookies.get('clientId')
+				headers: { 'Authorization': 'Basic ' + $localStorage.authString},
+				url : endpoint + "/client/" + $localStorage.clientId
 			}).then(function(response) {
 				if (response.data && response.data.length > 0) {
 
@@ -89,17 +87,13 @@ appControllers.controller('dashboardCtrl', ['auth', 'client', '$scope', '$cookie
         $state.go("app.dashboardSetting");
     };// End goToSetting.
 
-    $scope.clientDetails = function(){
-
-		
-
-	  	clientService.getClientDetails() ;
-
-
-		$scope.totalInitialInvestment = parseInt(0);
-
-	
-	};
+    // $scope.clientDetails = function(){
+// 
+	  	// clientService.getClientDetails() ;
+// 
+		// $scope.totalInitialInvestment = parseInt(0);
+// 
+	// };
 	
     $scope.addTransaction = function() {
 		
@@ -176,16 +170,16 @@ appControllers.controller('dashboardCtrl', ['auth', 'client', '$scope', '$cookie
                 }
             }
         }).then(function () {
-            $scope.dialogResult = "You choose Confirm!"
+            $scope.dialogResult = "You choose Confirm!";
         });
     };
 
     // Load funds for dropdown
-    $scope.loadFunds = function() {
-		
-      	clientService.loadFunds($scope);
-    };
-    
+    // $scope.loadFunds = function() {
+// 		
+      	// clientService.loadFunds($scope);
+    // };
+//     
     $scope.clientOpenPositions = function() {
     	clientService.loadClientOpenPositions($scope);
     };
